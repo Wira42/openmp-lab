@@ -1,0 +1,228 @@
+=== Environment ===
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+nproc: 2
+CPU(s):                                  2
+Model name:                              Intel(R) Xeon(R) Processor @ 2.80GHz
+
+=== Build ===
+
+=== Exercise 1, OMP_NUM_THREADS=1 ===
+Before: team size = 1
+Hello from thread 0 of 1
+After: team size = 1
+
+=== Exercise 1, OMP_NUM_THREADS=2 ===
+Before: team size = 1
+Hello from thread 0 of 2
+Hello from thread 1 of 2
+After: team size = 1
+
+=== Exercise 1, OMP_NUM_THREADS=4 ===
+Before: team size = 1
+Hello from thread 2 of 4
+Hello from thread 3 of 4
+Hello from thread 1 of 4
+Hello from thread 0 of 4
+After: team size = 1
+
+=== Exercise 2, OMP_NUM_THREADS=4 ===
+thread=2 base=12 scratch=4
+thread=3 base=13 scratch=9
+thread=0 base=10 scratch=0
+thread=1 base=11 scratch=1
+Outside: base=10 scratch=-1
+
+=== Exercise 3, OMP_NUM_THREADS=1 ===
+c[0]=0.0 c[n-1]=2999997.0 errors=0
+
+=== Exercise 3, OMP_NUM_THREADS=2 ===
+c[0]=0.0 c[n-1]=2999997.0 errors=0
+
+=== Exercise 3, OMP_NUM_THREADS=4 ===
+c[0]=0.0 c[n-1]=2999997.0 errors=0
+
+=== Exercise 4, OMP_NUM_THREADS=1 ===
+Expected : 500000500000
+Reduction: 500000500000
+Atomic   : 500000500000
+Critical : 500000500000
+
+=== Exercise 4, OMP_NUM_THREADS=2 ===
+Expected : 500000500000
+Reduction: 500000500000
+Atomic   : 500000500000
+Critical : 500000500000
+
+=== Exercise 4, OMP_NUM_THREADS=4 ===
+Expected : 500000500000
+Reduction: 500000500000
+Atomic   : 500000500000
+Critical : 500000500000
+
+=== Exercise 5, OMP_SCHEDULE=static, OMP_NUM_THREADS=4 ===
+iteration= 0 thread=0
+iteration= 1 thread=0
+iteration= 2 thread=0
+iteration= 3 thread=0
+iteration= 4 thread=0
+iteration= 5 thread=0
+iteration= 6 thread=0
+iteration= 7 thread=0
+iteration= 8 thread=1
+iteration= 9 thread=1
+iteration=10 thread=1
+iteration=11 thread=1
+iteration=12 thread=1
+iteration=13 thread=1
+iteration=14 thread=1
+iteration=15 thread=1
+iteration=16 thread=2
+iteration=17 thread=2
+iteration=18 thread=2
+iteration=19 thread=2
+iteration=20 thread=2
+iteration=21 thread=2
+iteration=22 thread=2
+iteration=23 thread=2
+iteration=24 thread=3
+iteration=25 thread=3
+iteration=26 thread=3
+iteration=27 thread=3
+iteration=28 thread=3
+iteration=29 thread=3
+iteration=30 thread=3
+iteration=31 thread=3
+threads=4 checksum=468.442495904457 seconds=0.039635
+
+=== Exercise 5, OMP_SCHEDULE=static,1, OMP_NUM_THREADS=4 ===
+iteration= 0 thread=0
+iteration= 1 thread=1
+iteration= 2 thread=2
+iteration= 3 thread=3
+iteration= 4 thread=0
+iteration= 5 thread=1
+iteration= 6 thread=2
+iteration= 7 thread=3
+iteration= 8 thread=0
+iteration= 9 thread=1
+iteration=10 thread=2
+iteration=11 thread=3
+iteration=12 thread=0
+iteration=13 thread=1
+iteration=14 thread=2
+iteration=15 thread=3
+iteration=16 thread=0
+iteration=17 thread=1
+iteration=18 thread=2
+iteration=19 thread=3
+iteration=20 thread=0
+iteration=21 thread=1
+iteration=22 thread=2
+iteration=23 thread=3
+iteration=24 thread=0
+iteration=25 thread=1
+iteration=26 thread=2
+iteration=27 thread=3
+iteration=28 thread=0
+iteration=29 thread=1
+iteration=30 thread=2
+iteration=31 thread=3
+threads=4 checksum=468.442495904457 seconds=0.036370
+
+=== Exercise 5, OMP_SCHEDULE=dynamic,1, OMP_NUM_THREADS=4 ===
+iteration= 0 thread=3
+iteration= 1 thread=2
+iteration= 2 thread=3
+iteration= 3 thread=2
+iteration= 4 thread=3
+iteration= 5 thread=2
+iteration= 6 thread=3
+iteration= 7 thread=3
+iteration= 8 thread=1
+iteration= 9 thread=3
+iteration=10 thread=1
+iteration=11 thread=3
+iteration=12 thread=1
+iteration=13 thread=3
+iteration=14 thread=3
+iteration=15 thread=3
+iteration=16 thread=3
+iteration=17 thread=2
+iteration=18 thread=3
+iteration=19 thread=0
+iteration=20 thread=3
+iteration=21 thread=0
+iteration=22 thread=3
+iteration=23 thread=2
+iteration=24 thread=3
+iteration=25 thread=2
+iteration=26 thread=0
+iteration=27 thread=3
+iteration=28 thread=1
+iteration=29 thread=3
+iteration=30 thread=1
+iteration=31 thread=3
+threads=4 checksum=468.442495904457 seconds=0.037996
+
+=== Exercise 5, OMP_SCHEDULE=guided,1, OMP_NUM_THREADS=4 ===
+iteration= 0 thread=2
+iteration= 1 thread=2
+iteration= 2 thread=2
+iteration= 3 thread=2
+iteration= 4 thread=2
+iteration= 5 thread=2
+iteration= 6 thread=2
+iteration= 7 thread=2
+iteration= 8 thread=1
+iteration= 9 thread=1
+iteration=10 thread=1
+iteration=11 thread=1
+iteration=12 thread=1
+iteration=13 thread=1
+iteration=14 thread=0
+iteration=15 thread=0
+iteration=16 thread=0
+iteration=17 thread=0
+iteration=18 thread=0
+iteration=19 thread=3
+iteration=20 thread=3
+iteration=21 thread=3
+iteration=22 thread=3
+iteration=23 thread=1
+iteration=24 thread=1
+iteration=25 thread=1
+iteration=26 thread=2
+iteration=27 thread=2
+iteration=28 thread=1
+iteration=29 thread=1
+iteration=30 thread=1
+iteration=31 thread=1
+threads=4 checksum=468.442495904457 seconds=0.033242
+
+=== Exercise 6, OMP_NUM_THREADS=4 ===
+mean=6.5 first=-5.5 last=5.5 sum=0.0
+
+=== Exercise 7, OMP_NUM_THREADS=4 ===
+task=0 result=0 executed_by=3
+task=1 result=1 executed_by=3
+task=2 result=4 executed_by=3
+task=3 result=9 executed_by=3
+task=4 result=16 executed_by=3
+task=5 result=25 executed_by=3
+task=6 result=36 executed_by=3
+task=7 result=49 executed_by=3
+
+=== Exercise 8, OMP_NUM_THREADS=1 ===
+n=100000000 warmup_threads=1 actual_threads=1
+serial_pi=3.141592653590 parallel_pi=3.141592653590
+difference=0.000e+00 reference_error=6.333e-13
+serial_seconds=0.135210 parallel_seconds=0.137738
+speedup=0.982 efficiency=0.982
+
+=== Exercise 8, OMP_NUM_THREADS=2 ===
+n=100000000 warmup_threads=2 actual_threads=2
+serial_pi=3.141592653590 parallel_pi=3.141592653590
+difference=5.165e-13 reference_error=1.168e-13
+serial_seconds=0.131579 parallel_seconds=0.066843
+speedup=1.968 efficiency=0.984
